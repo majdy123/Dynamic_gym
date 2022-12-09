@@ -1,0 +1,195 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('ZenKurenaido-Regular.ttf');
+}
+@font-face {
+    font-family: 'myfont2';
+    src: url('FingerPaint-Regular.ttf');
+}
+@font-face {
+    font-family: 'myfont3';
+    src: url('SairaStencilOne-Regular.ttf');
+}
+.logo{
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+
+}
+.bar ul li {
+    margin: 20px;
+    display: inline-block;
+    padding: 10px;
+    list-style-type: none;
+    font-size: 30px;
+    font-family: "myfont2";
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    float: left;
+
+}
+.bar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(251,91,33);
+    position: absolute;
+    display: inline-block;
+    left : 4px;
+    bottom: -4px;
+    transition: 0.5s;
+}
+
+
+.bar ul li:hover::after{
+    width:80px;
+}
+
+.bar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.fit{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.signin-panel{
+    width: 460px;
+    height: 210px;
+    background-image:linear-gradient(180deg, rgba(37, 36, 36, 0.4), rgba(38, 38, 38, 0.5));
+    border-radius: 50px;
+}
+.outerdiv{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.fit h1 {
+    position: absolute;
+    top: 40px;
+    left: 640px;
+    text-transform: uppercase;
+    font-family: "Trebuchet MS";
+    font-size: 55px;
+    font-weight: bold;
+
+}
+/*
+.heder{
+    justify-content: center;
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+}*/
+.tabel1 td {
+    padding-left: 30px;
+    border-radius:20px;
+}
+.tabel1{
+    border-radius: 50px;
+    width: 460px;
+    height: 200px;
+    font-family: "myfont3";
+    font-size: 24px;
+}
+.textfiled{
+    height:35px;
+    font-family: "myfont";
+    color: white;
+    font-size: 20px;
+    background: none;
+    border-radius: 20px;
+    border: white 1px solid;
+    overflow: hidden;
+    position: relative;
+    padding: 3px;
+    text-align: center;
+}
+
+.table2 td {
+    padding: 30px;
+    border-radius:20px;
+}
+.table2{
+    width: 460px;
+    height: 80px;
+    border-radius: 20px;
+    font-family: "myfont";
+    font-size : 20px;
+}
+.table2 button
+{
+    width:170px;
+    height: 40px;
+    background: none;
+    text-align: center;
+    border-radius: 20px;
+    border : 2px transparent solid;
+    font-family: "myfont3";
+    font-size: 24px;
+    color: black;
+    transition: 0.8s;
+}
+.submit_but_st{
+    width:170px;
+    height: 40px;
+    background: none;
+    text-align: center;
+    border-radius: 20px;
+    border : 2px transparent solid;
+    font-family: "myfont";
+    font-size: 24px;
+    color: black;
+    transition: 0.8s;
+}
+#button1:hover{
+    background: rgb(251,91,33);
+    color: white;
+}
+#button2:hover{
+    background: rgb(251,91,33);
+    color: white;
+}
+
+.forgetpass{
+    font-family: "myfont";
+    font-size: 14px;
+    border-radius: 8px;
+    width: 100px;
+    color: white;
+    height:6px;
+    margin-left: 110px;
+    position: relative;
+    padding-left: 6px;
+    padding-right:6px ;
+    text-align: center;
+    transition: 0.5s;
+
+}
+.forgetpass:hover{
+    background-color:rgb(251,91,33);
+    color:black;
+}
+
+@keyframes back{
+    100%{
+      background-position: 2000px 0;
+    }
+}
+.Erorr_massage{
+    position: absolute;
+    font-family: myfont;
+    color: red;
+    margin-left: 87vw;
+}

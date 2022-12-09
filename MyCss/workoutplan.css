@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('ZenKurenaido-Regular.ttf');
+}
+@font-face {
+    font-family: 'myfont2';
+    src: url('FingerPaint-Regular.ttf');
+}
+@font-face {
+    font-family: 'myfont3';
+    src: url('SairaStencilOne-Regular.ttf');
+}
+.wallpaperworkoutplan{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url("imgesStyle/workoutplan.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+.conterner{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: end;
+    justify-content: center;
+}
+.sloot1{
+   /* border: white 1px solid;*/
+    width: 50vw;
+    height: 73vh;
+    overflow: auto;
+    display: none;
+    margin-bottom: 50px;
+}
+.sloot2{
+   /* border: white 1px solid;*/
+    width: 50vw;
+    height: 73vh;
+    overflow: auto;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+/*for the Scroll bar styles
+ */
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    opacity: 0.2;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(251,91,33);
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(140, 63, 36);
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.titleSel{
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    padding: 60px;
+}
+.create-a-plan{
+    font-family: myfont;
+    font-size: 26px;
+    color: white;
+    margin-right: 80px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.5s;
+    background: linear-gradient(to left,rgb(251,91,33),rgb(255,255,255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 400% 400%;
+    animation: change 3s ease-in-out infinite;
+}
+.create-a-plan::before{
+    position: absolute;
+    content:'';
+    background-color: rgb(251,91,33);
+    width: 0px;
+    bottom: -9px;
+    height: 2px;
+    transition: 0.5s;
+}
+.create-a-plan:hover::before{
+    width: 150px;
+}
+.Send-plan{
+    margin-left: 80px;
+    font-family: myfont;
+    font-size: 26px;
+    color: white;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.5s;
+    background: linear-gradient(to left,rgb(251,91,33),rgb(255,255,255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 400% 400%;
+    animation: change 3s ease-in-out infinite;
+}
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
+.Send-plan::before{
+    position: absolute;
+    content:'';
+    background-color: rgb(251,91,33);
+    width: 0px;
+    bottom: -9px;
+    height: 2px;
+    transition: 0.5s;
+}
+.Send-plan:hover::before{
+    width: 110px;
+}
+.Send-plan:hover{
+    color: rgb(123,123,123);
+}
+.create-a-plan:hover{
+    color: rgb(123,123,123);
+}
+.WeekDay{
+    border-bottom: rgb(251,91,33) 2px solid;
+    height: 350px;
+    width: 720px;
+
+}
+.ColweekDay-plan{
+    display: flex;
+    flex-direction: column;
+}
+.ColweekDay-plan h4 {
+    height: 8vh;
+    font-family: myfont;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    border-radius: 50px;
+    border: white 1px solid;
+}
+.ColweekDay-plan-content{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+#here-we-will-put-the-personal-photo{
+    border-radius: 100%;
+    margin-top: 10px;
+    background-size :cover;
+    width: 300px;
+    height: 200px;
+}
+
+.ColweekDay-plan-content-info-customer{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+
+}
+.ColweekDay-plan-content-info{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+
+}
+.ColweekDay-plan-content-info-Label{
+    font-family: myfont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    transition: 3s ;
+    margin-top: 50px;
+}
+.ColweekDay-plan-content-info-Label::before{
+    position: absolute;
+    content:'';
+    background-color: rgb(251,91,33);
+    width: 200px;
+    height: 3px;
+    bottom: -1px;
+    animation: weekdayanim 0.5s alternate-reverse infinite;
+}
+.ColweekDay-plan-content-info-Label::after{
+    position: absolute;
+    content:'';
+    background-color: rgb(251,91,33);
+    width: 0px;
+    height: 2px;
+    top: -1px;
+    animation: weekdayanim2 0.5s alternate-reverse infinite;
+}
+
+.ColweekDay-plan-content-info-Label1{
+    font-family: myfont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    transition: 3s ;
+    margin-top: 20px;
+}
+.ColweekDay-plan-content-info-Label1::before{
+    position: absolute;
+    content:'';
+    background-color: rgb(251,91,33);
+    width: 200px;
+    height: 3px;
+    bottom: -1px;
+    animation: weekdayanim 0.5s alternate-reverse infinite;
+}
+.ColweekDay-plan-content-info-Label1::after{
+    position: absolute;
+    content:'';
+    background-color: rgb(251,91,33);
+    width: 0px;
+    height: 2px;
+    top: -1px;
+    animation: weekdayanim2 0.5s alternate-reverse infinite;
+}
+
+
+@keyframes weekdayanim {
+    form{
+        width: 70px;
+    }
+    to{
+        width: 0px;
+    }
+}
+@keyframes weekdayanim2 {
+    form {
+        width: 0px;
+    }
+    to {
+        width: 70px;
+    }
+}
+.ColweekDay-plan-content-info-bootstrab{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    margin-top: 130px;
+}
+.ColweekDay-plan-content-info-bootstrab-customer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    margin-top: 40px;
+}
+.info_about_this_cus{
+    font-family: myfont;
+    color: white;
+}
+.info_about_this_cus tr td{
+    text-align: center;
+    height: 30px;
+}
+.ColweekDay-plan-content-photoArm{
+    width: 15vw;
+    background-image:url("PlayAreabody/arms.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-photoChest{
+    width: 15vw;
+    background-image:url("PlayAreabody/chest.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-photoLeg{
+    width: 15vw;
+    background-image:url("PlayAreabody/legs.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-phototummy{
+    width: 15vw;
+    background-image:url("PlayAreabody/tummy.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-Ready{
+    width: 15vw;
+    background-image:url("PlayAreabody/ready.png") ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-photoBack{
+    width: 15vw;
+    background-image:url("PlayAreabody/output-onlinepngtools (11).png") ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-photoSholder{
+    width: 15vw;
+    background-image:url("PlayAreabody/sholder.png") ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.ColweekDay-plan-content-OffDay{
+    width: 15vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+.custommademajdy{
+    box-shadow:0px 0px 0px 0px #ccc;
+    background: transparent;
+    border: rgb(251,91,33) solid 2px;
+    border-radius:20px;
+    transition: 0.5s;
+    color: white;
+    width: 200px;
+
+}
+.custommademajdy:hover{
+    background-color: rgb(251,91,33);
+    color: black;
+}
+.BodyAddExercises{
+    height: 500px;
+    width: 100%;
+    text-align: center;
+}
+.titleAddExnav{
+    color: white;
+    font-family: myfont;
+    text-align: right;
+    width: 800px;
+
+}
+.spacebet1{
+    overflow: auto;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.empty{
+    display: inline-block;
+    position: relative;
+    height: 300px;
+    width: 200px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 50px;
+    border-radius: 30px;
+    border-bottom: rgb(255, 255, 255) solid 3px;
+    border-top: rgb(255, 255, 255) solid 3px;
+    margin: 15px;
+    border-radius: 30px;
+}
+.SelectExers{
+    font-family: myfont;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+}
+.Exersiesphoto{
+    height: 200px;
+    width: 190px;
+    border-radius: 30px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.fileinput{
+    background-color: transparent;
+    font-family: myfont;
+    color: white;
+    margin-bottom: 5px;
+}
+.textfiels{
+    background-color:transparent;
+    border: 2px solid rgb(231,91,33);
+    border-radius:10px ;
+    color: white;
+    width: 190px;
+    font-family:myfont ;
+    padding: 2px;
+}
+.image-peview{
+    display: none;
+    width: 100%;
+}
+.numbersInput{
+    background-color:transparent;
+    border: 2px solid rgb(231,91,33);
+    border-radius:10px ;
+    color: white;
+    width: 190px;
+    font-family:myfont ;
+    padding: 2px;
+}

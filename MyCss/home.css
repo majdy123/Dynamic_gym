@@ -1,0 +1,871 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('ZenKurenaido-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'myfont2';
+    src: url('FingerPaint-Regular.ttf');
+}
+@font-face {
+    font-family: 'myfont3';
+    src: url('SairaStencilOne-Regular.ttf');
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    opacity: 0.2;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(251,91,33);
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(140, 63, 36);
+}
+
+body {
+    overflow-x: hidden;
+     /* Hide horz scrollbars */
+}
+.sliderabs{
+    z-index: 1;
+    position: absolute;
+}
+.home{
+    margin: 12px;
+    width: 100vw;
+    height: 50px;
+    position: absolute;
+    z-index: 4;
+}
+.logo{
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    z-index: 2;
+    position: absolute;
+}
+
+.bar{
+    margin-top: 20px;
+    margin-right: 10px;
+    padding-top:10px ;
+    list-style-type: none;
+    font-size: 20px;
+    font-family: "myfont";
+    color: white;
+    width: 1500px;
+    align-content: center;
+    position: relative;
+    display: inline-block;
+    float: right;
+    height:50px ;
+}
+.spanbar{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin-right:10px;
+    height: 50px;
+    width: 150px;
+    cursor:pointer;
+    display: flex;
+    float: right;
+}
+
+/* Those for the soudo element */
+.spanbar::after{
+    top : 40px;
+    position: absolute;
+    content:' ';
+    height: 2px;
+    width: 0px;
+    background: rgb(251,91,33);
+    transition: 0.5s;
+}
+
+#H:hover::after{
+width: 60px;
+}
+#A:hover::after{
+    width: 60px;
+}
+#nut:hover::after{
+    width: 60px;
+}
+#el:hover::after{
+    width: 80px;
+}
+#s1:hover::after{
+    width: 80px;
+}
+#N:hover::after{
+    width: 140px;
+}
+#Setting:hover::after{
+    width: 140px;
+}
+#W:hover::after{
+    width: 80px;
+}
+/* end of the soudo element design*/
+
+
+
+
+.spandiv{
+
+    width: 200px;
+    height: 120px;
+    float: right;
+    border-radius: 20px;
+    margin-top:30px ;
+    display: inline;
+    position: absolute;
+}
+
+#about{
+    height: 90px;
+}
+.spandiv ,li {
+    visibility: hidden;
+}
+
+
+.spanbar:hover,li{
+    visibility: visible;
+}
+
+.spanbar:focus .spandiv,
+.spanbar:hover .spandiv {
+    visibility: visible;
+    background: rgb(251,91,33);
+    opacity: 1;
+    z-index: 1;
+    transition: 1s;
+    transform: translateY(10%);
+    transition-delay: 0s, 0s, 0.5s;
+
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0s, 0s, 0.2s;
+
+}
+
+
+#W:hover li a{
+    opacity: 1;
+}
+#N:hover li a{
+    opacity: 1;
+}
+#el:hover li a{
+    opacity: 1;
+}
+#A:hover li a{
+    opacity: 1;
+}
+li input {
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0s, 0s, 0.2s;
+
+}
+
+
+#W:hover li input{
+    opacity: 1;
+}
+#N:hover li input{
+    opacity: 1;
+}
+#el:hover li input{
+    opacity: 1;
+}
+#A:hover li input{
+    opacity: 1;
+}
+
+#home{
+    display: none;
+}
+#element{
+    width: 170px;
+    height: 140px;
+}
+#sett{
+    width: 170px;
+    height: 140px;
+}
+#el{
+    width: 170px;
+    height: 140px;
+}
+#s1{
+    width: 170px;
+    height: 140px;
+}
+#work{
+    width: 150px;
+    height: 140px;
+}
+
+#S{
+    width: 170px;
+    height: 140px;
+}
+
+.listelement{
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+li{
+    padding-left: 11px;
+}
+li:hover a {
+    border-radius: 20px;
+    color: white;
+    transition: 1s;
+}
+li:hover input {
+    border-radius: 20px;
+    color: white;
+    transition: 1s;
+}
+a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+input{
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.bar li::after {
+    content: ' ';
+    height: 3px;
+    width: 0;
+    background: rgb(251,91,33);
+    position: absolute;
+    display: inline-block;
+    left : 4px;
+    bottom: -4px;
+    transition: 0.5s;
+}
+
+/*  start style work for inner Home screen  */
+
+.custom{
+    font-family: myfont;
+    font-weight: bolder;
+    color:  rgb(251,91,33);
+}
+.buttout{
+    position: absolute;
+
+}
+.class1home{
+    color: white;
+    font-family: myfont;
+    z-index: 1;
+    width: 100vw;
+    top:50vh;
+    right: 50vw;
+    transform: translate(50%,50%);
+    letter-spacing: 50px;
+    animation: textanim 2s;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+
+}
+#cenB{
+    margin-top: 20px;
+    letter-spacing: 0px;
+    animation: movanm 2s;
+    height: 50px;
+    width: 220px;
+    border-radius: 80px;
+    background: transparent;
+    border: 2px solid  rgb(251,91,33);
+    color: white;
+    font-size: 20px;
+    transition: 1s;
+
+}
+#cenB:hover{
+    background:rgb(251,91,33);
+    color: black;
+    font-weight: bolder;
+}
+@keyframes textanim{
+    from{
+        opacity: 0.1;
+        letter-spacing: 50px;
+
+    }
+    to{
+        opacity: 1;
+        letter-spacing: 0px;
+    }
+}
+@keyframes movanm{
+    from{
+        opacity: 0;
+        letter-spacing: 22px;
+        margin-top: 150px ;
+
+
+    }
+    to{
+        opacity: 1;
+        letter-spacing: 0px;
+    }
+}
+
+.whattoplay{
+    width:300px;
+    background: rgb(251,91,33);
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+    transition: 0.5s;
+    animation: whattoplayanim 0.5s forwards;
+    padding-right:  0px;
+
+}
+@keyframes whattoplayanim {
+   from{
+       /*letter-spacing: 5px;*/
+       padding-right:  0px;
+    }
+    to{
+       padding-right:  40px;
+    }
+}
+.spanplay{
+    font-family: myfont;
+    color: white;
+    font-weight: lighter;
+    font-size: 25px;
+}
+#dumb{
+    opacity:0;
+    animation: dumpanim 0.5s;
+    transition: 0.6s;
+}
+@keyframes dumpanim {
+    from{
+        opacity: 0;
+        margin-left:0px ;
+    }
+    to{
+        opacity: 1;
+        margin-left:10px ;
+    }
+}
+.sportsbar{
+     width: 100vw;
+     height:120px;
+     position: relative;
+ }
+table {
+    height: 120px;
+    width: 100vw;
+    text-align: center;
+
+}
+.tabeldata{
+    animation: tabelanim 1s;
+    transition: 0.5s;
+    opacity: 0;
+}
+#firstshaft{
+    opacity: 1;
+}
+h4{
+    color: rgb(251,91,33);
+    font-family: myfont;
+    font-weight: bolder;
+    display: inline;
+}
+p {
+    font-family: myfont;
+    font-size: 18px;
+}
+@keyframes tabelanim {
+    from{
+        opacity: 1;
+        border-right:rgb(251,91,33) 1px solid;
+    }
+    to{
+        opacity: 0;
+        border-right:transparent 1px solid;
+    }
+}
+.ourprogram{
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    animation: outer forwards 1s;
+    transition: 0.5s;
+}
+@keyframes outer {
+    from{
+        border-right:transparent 1px solid;
+    }
+    to{
+        border-right:rgb(251,91,33) 1px solid;
+    }
+}
+.innerprog{
+    margin-top: 100px;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    height: 100%;
+    width: 80vw;
+    background-repeat:no-repeat;
+    background-position: right;
+
+}
+td{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.Ad1{
+
+    border: black 1px solid;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-image:linear-gradient(to bottom,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("https://wallpapercave.com/wp/wp2483011.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "myfont";
+    text-align: center;
+    justify-content: center;
+
+}
+.Ad2{
+
+
+    width: 100%;
+    height: 500px;
+    position: relative;
+    color: black;
+}
+.Ad3{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: block;
+    color: black;
+}
+.crphotos{
+    /* rounded photo */
+}
+.crphotofa {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+.crphotofa td{
+    width: 50px;
+    height: 80px;
+
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+#paragraph1{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    background-image:url("https://images.hdqwalls.com/download/fitness-gym-girl-nb-1680x1050.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+#paragraph1 p {
+    padding-left:15% ;
+    padding-right:15% ;
+    padding-top: 20% ;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+}
+#paragraph2 p {
+    padding-left:15% ;
+    padding-right:15% ;
+    padding-top: 20% ;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+}
+
+#paragraph2{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    display: block;
+    background-image:url("https://img5.goodfon.com/original/1920x1080/f/15/back-fitness-gym-power-pose.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.spacebet1{
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.spacebet1 div{
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+    display: inline-block;
+    color: rgb(251,91,33);
+}
+
+.spacebet1 p{
+    color: rgb(251,91,33);
+    font-size: 25px;
+    display: inline-block;
+}
+.span1{
+    border-radius: 100%;
+    background-image: url("https://64.media.tumblr.com/05b1d8ab9c5d9ecc215a02340b1ca72c/34838ebc978cb38c-e6/s640x960/d625ce4736428430b11060b1d955e0e788327c63.png");
+    background-size:cover ;
+}
+.span2{
+    border-radius: 100%;
+    background-image: url("https://64.media.tumblr.com/9d6a5cd959be77016e9e0a0d6f929ada/08d4bba5d0ffa461-4a/s640x960/5141ac0d17afec8dd94d25d07f7d1ebb6f223223.jpg");
+    background-size:cover ;
+}
+.span3{
+    border-radius: 0%;
+    background-image: url("https://64.media.tumblr.com/7ff01f8a3e7d9759d19a25293343d416/fa9bdf646656b297-35/s250x400/cebfa5c5f288267b3277fe0e4e44c62578dede67.png");
+    background-size:auto ;
+    background-repeat: no-repeat;
+}
+
+.middiv{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    color: white;
+    outline:none;
+    background-color: rgb(25,30,35);
+    padding-top: 150px;
+}
+.middiv2{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    color: white;
+    outline:none;
+    padding-top: 50px;
+}
+.names {
+    color: rgb(251,91,33);
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.middiv2 td {
+    padding: 40px;
+}
+.middivmodify{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    color: white;
+    outline:none;
+    background-image:url("https://static.wixstatic.com/media/313907_7f1557749f504668a00609da25011529.jpg/v1/fill/w_1500,h_540,al_c,q_85/313907_7f1557749f504668a00609da25011529.webp");
+    padding-top: 150px;
+
+}
+
+#paragraph3{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    display: block;
+    background-image:url("https://get.wallhere.com/photo/sports-black-women-model-blonde-sport-ass-wall-fitness-model-dumbbells-back-weightlifting-bodybuilding-structure-barbell-muscle-arm-chest-photo-shoot-sport-venue-physical-fitness-weight-training-biceps-curl-331132.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+#paragraph4{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    display: block;
+    background-image:url("https://i2.wp.com/presssportsagency.com/wp-content/uploads/2020/06/32744.jpg?w=1920&ssl=1");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.coatch1{
+    background-image: url("https://mcdn.wallpapersafari.com/medium/90/69/N48CcE.jpeg");
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    transition: 1s ease-in-out;
+}
+.coatch2{
+    background-image:url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/147115/147115_00_2x.jpg?20180627033022");
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    transition: 1s ease-in-out;
+}
+.coatch3{
+    background-image:url("https://miro.medium.com/max/1400/0*nWUNypTS3JPLitGi.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    transition: 1s ease-in-out;
+}
+
+.coatch4{
+    background-image:url("https://fitinst.com/wp-content/uploads/2018/03/fitness-app-for-fitness-instructors.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    transition: 1s ease-in-out;
+}
+.sara{
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    visibility: hidden;
+    transition: 1s ease-in-out;
+    opacity: 0;
+
+}
+.jon{
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    visibility: hidden;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+.david{
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    visibility: hidden;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+.mia{
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    visibility: hidden;
+    transition: 1s;
+    opacity: 0;
+}
+.coatch1:hover .sara{
+    padding-top: 400px;
+    visibility: visible;
+    opacity: 1;
+}
+.coatch3:hover .mia{
+    padding-top: 400px;
+    visibility: visible;
+    opacity: 1;
+}
+.coatch2:hover .jon{
+    padding-top: 400px;
+    visibility: visible;
+    opacity: 1;
+}
+.coatch4:hover .david{
+    padding-top: 400px;
+    visibility: visible;
+    opacity: 1;
+}
+.coatch1:hover {
+    width: 250px;
+    height: 250px;
+
+
+}
+.coatch2:hover{
+    width: 250px;
+    height: 250px;
+
+
+ }
+.coatch3:hover{
+    width: 250px;
+    height: 250px;
+
+
+}
+.coatch4:hover{
+    width: 250px;
+    height: 250px;
+ }
+#whatcoatchdo1{
+    margin-top: 30px;
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+    transition: 1s;
+
+}
+
+#whatcoatchdo2{
+    margin-top: 30px;
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+    transition: 1s;
+}
+#whatcoatchdo3{
+    margin-top: 30px;
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+    transition: 1s;
+}
+#whatcoatchdo4{
+    margin-top: 30px;
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.puta:hover #whatcoatchdo1{
+    background-color:rgb(251,91,33);
+    border-radius: 10px;
+    color: white;
+}
+.puta:hover #whatcoatchdo2{
+    background-color:rgb(251,91,33);
+    border-radius: 10px;
+    color: white;
+
+}
+.puta:hover #whatcoatchdo3{
+    background-color:rgb(251,91,33);
+    border-radius: 10px;
+    color: white;
+}
+.puta:hover #whatcoatchdo4{
+    background-color:rgb(251,91,33);
+    border-radius: 10px;
+    color: white;
+}
+.names {
+    opacity: 0;
+    transition: 1s;
+}
+.puta:hover .names{
+    opacity: 1;
+    border-bottom: 2px solid rgb(251,91,33);
+}
+.middivmodify2{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    color: white;
+    background-color: rgb(18,18,18);
+}
+.folterinfoclass{
+    width: 100vw;
+    height: 90px;
+    background-color: black;
+    font-size:20px;
+    padding:40px;
+    font-family: myfont;
+    color: white;
+}
+.infocompclass{
+    background-color: rgb(18,18,18);
+    padding-bottom: 400px;
+
+}
+.infocompclass {
+    padding: 80px;
+}
+.infocompclass td{
+    width: 100vw;
+    height: 60px;
+    margin-bottom: 40px;
+
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.labelphoto1{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+
+}
+.spanplanname{
+    font-family: myfont2;
+    font-size: 25px;
+}
+.picktit{
+    text-align: center;
+    border-bottom: rgb(251,91,33) 2px solid;
+}
+.buyplan{
+    background-color: transparent;
+    border: 2px solid rgb(251,91,33);
+    border-radius:20px ;
+    color: black;
+    font-family: myfont;
+    transition: 0.8s;
+}
+.buyplan:hover{
+    background-color: rgb(251,91,33);
+    color: white;
+}

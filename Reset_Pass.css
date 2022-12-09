@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'myfont';
+    src: url('ZenKurenaido-Regular.ttf');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: myfont;
+}
+.PA{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2) ,rgba(0,0,0,0.2)) ,url("icons/Personal Acc.jpg");
+    background-size: cover;
+    background-position:initial;
+    position: relative;
+}
+
+.Container{
+    position: relative;
+    display: flex;
+    flex-direction: row
+}
+.Re_txt {
+// border: white 2px solid;
+    width: 500px;
+    margin-left: 250px;
+    margin-top: 100px;
+}
+.Re_txt h1{
+    color: white;
+    font-size: 55px;
+    margin-top: 45px;
+
+}
+.Re_txt_p {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 350;
+}
+.input{
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.email_in{
+    display: flex;
+    flex-flow: column;
+    opacity: 1;
+    width: 85%;
+}
+.em_in_text{
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: myfont;
+    margin-bottom: 3px;
+}
+.em_in_data{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    width: 100%;
+}
+
+.Input_EM{
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(117, 117, 117);
+    color: rgb(30, 30, 30);
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0px 11px;
+    height: 56px;
+
+}
+.Input_EM:hover{
+    background-color: rgb(220,220,220);
+}
+
+.verify_in{
+    display: flex;
+    flex-flow: column;
+    opacity: 1;
+    width: 85%;
+}
+
+.VER_in_text{
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: myfont;
+    margin-bottom: 3px;
+}
+
+.VER_in_data{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    width: 100%;
+}
+.Ver_EM{
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(117, 117, 117);
+    color: rgb(30, 30, 30);
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0px 11px;
+    height: 56px;
+
+}
+
+.Ver_EM:hover{
+    background-color: rgb(220,220,220);
+}
+
+.Reset_in{
+    display: flex;
+    flex-flow: column;
+    opacity: 1;
+    width: 85%;
+}
+
+.Res_in_text{
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: myfont;
+    margin-bottom: 3px;
+}
+
+.Res_in_data{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    width: 100%;
+}
+.Res_in{
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(117, 117, 117);
+    color: rgb(30, 30, 30);
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0px 11px;
+    height: 56px;
+}
+
+.Res_in:hover{
+    background-color: rgb(220,220,220);
+}
+
+.Continue_reset{
+    width: 175px;
+    display: inline-flex;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px 15px 15px 53px;
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(251,91,33);
+    margin-left: 250px;
+    color: white;
+    font-weight:600 ;
+    font-size: 19px;
+    line-height: 24px;
+}
+.Continue_reset:hover{
+    background: #d35a21;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
